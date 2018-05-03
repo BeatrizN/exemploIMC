@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login V8</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-form validate-form p-l-55 p-r-55 p-t-178">
+					<span class="login100-form-title">
+						Calcular Indice da massa Corporea
+					</span>
+
+					<div class="wrap-input100 validate-input m-b-16" data-validate="Por favor, digite seu peso em quilogramas">
+						<input class="input100" type="number" name="peso" id="gord" placeholder="Peso em kg">
+						<span class="focus-input100"></span>
+					</div>
+					
+					<div class="wrap-input100 validate-input m-b-16" data-validate="Por favor, digite sua altura em metros">
+						<input class="input100" type="number" name="metros" id="baix" placeholder="Altura em metros">
+						<span class="focus-input100"></span>
+					</div>
+<!--
+					<div class="wrap-input100 validate-input" data-validate = "Please enter password">
+						<input class="input100" type="Password" name="pass" placeholder="Altura em metros">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="text-right p-t-13 p-b-23">
+						<span class="txt1">
+							Forgot
+						</span>
+
+						<a href="#" class="txt2">
+							Username / Password?
+						</a>
+					</div>
+-->
+					<div class="container-login100-form-btn">
+						<button onclick="calcularIMC()" class="login100-form-btn">
+							<h3>Calcular</h3>
+						</button>
+					</div>
+
+					<div class="flex-col-c p-t-50 p-b-40">
+						<span class="txt1 p-b-9">
+							<h4>IMC: </h4>
+						</span>
+						<span id="resultado"></span>
+<!--
+						<a href="#" class="txt3">
+							Sign up now
+						</a>-->
+					</div>
+					<!--
+					<label for="imc">IMC:</label>
+            		<output type="text" name="imc"/>
+            		
+            		
+            		<div class="wrap-input100 validate-input m-b-16">
+						<input class="input100" type="text" name="saida" placeholder="imc:">
+						<span class="focus-input100"></span>
+					</div>-->
+					
+					
+            		
+            			
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<script>	
+		function calcularIMC(){
+			var pesoGorda = document.getElementById('gord');
+			var peso = pesoGorda.value;   
+			var metroGorda = document.getElementById('baix');
+			var metros = metroGorda.value; 		   
+			var imc = peso / (metros * metros);   
+			var resultado = document.getElementById('resultado'); 
+			resultado.innerText = imc.toFixed(2);
+			console.log(imc);
+			cnsole.log(resultado);
+			document.getElementById('openReveal').click();
+		}	
+	</script>
+	
+</body>
+</html>
